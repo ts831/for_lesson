@@ -1,0 +1,276 @@
+html{
+    
+}
+
+
+body{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family:"BIZ UDPGothic",sans-serif;
+    max-width: 1440px;
+}
+
+#nav-1{
+    display: flex;
+    justify-content: right;
+}
+
+#saiyou-nav{
+    display: flex;
+    font-weight: bold;
+    margin: 5px;
+}
+#saiyou-nav>a{
+    color: #ffffff;
+    background-color: #5d4828;
+    font-size: 14px;
+    padding: 10px; 
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 5px;
+
+}
+#saiyou-nav>a::before{
+    content: ">";
+    font-size: 10px;
+    margin-right: 6px;
+}
+#navigation-nav{
+    display: flex;
+    margin-right: 10px;
+    background-color:#fcf6f2 ;
+}
+#navigation-nav a{
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+}
+#navigation-nav td:nth-child(2){
+    border-left:1px solid #E5DCDB;
+    border-right: 1px solid #E5DCDB;
+}
+
+#other-nav{
+    display: flex;
+}
+
+#other-nav td{
+    padding:0 15px 0 15px ;
+}
+#other-nav td:nth-child(2){
+    border-right:1px solid #5d4828 ;
+    border-left:1px solid #5d4828 ; 
+}
+
+#main_nav{
+    display: flex;
+    margin: 10px 0 20px 0;
+    width: 100%;
+}
+
+#navigation{
+    width: 100%;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+.nav-links a{
+    display: block;
+    border-left: 0.5px solid #E5DCDB ;
+    color: #333333;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 18px 50px;
+}
+
+.nav-links a:nth-child(5){
+    border-right: 0.5px solid #E5DCDB;
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+#main img{
+    width: 100%;
+   height: auto;
+}
+
+#in-main-img{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#in-main-img h2{
+    font-size: 60px;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-family: "Shippori Mincho",serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    line-height:1.2;
+    
+}
+#in-main-img a{
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 25px;
+    color:#bd402a ;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#in-main-img a::before{
+    content: ">";
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+#for-patient{
+    display: flex;
+    margin-left: auto;
+    width: 70%;
+    padding: 10px;
+    background-color:#FFFFFF;
+    box-shadow:-5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: -100px;
+    z-index: 10;
+}
+
+#for-patient-contents-1{
+    width: 50%;
+    height: auto;
+}
+
+#for-patient-link{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    gap:20px 0 ;
+}
+
+#for-patient-link a{
+position: relative;
+text-decoration: none;
+text-align: center;
+padding: 0 10px;
+margin: 8px 0;
+}
+
+#for-patient-link a:nth-of-type(2),#for-patient-link a:nth-of-type(5){
+    border-right:1px solid #E5DCDB ;
+    border-left: 1px solid #E5DCDB;
+    border-radius: 3px;
+}
+
+#for-patient-link a:nth-of-type(-n+3){
+    display: block;
+}
+
+#for-patient-link a:nth-of-type(-n+3)::after{
+content: "";
+pointer-events: none;
+width: 105%;
+height: 1px;
+border-radius: 5px;
+background-color: #E5DCDB; 
+position: absolute;
+left: 0;
+bottom: -20px; 
+}
+
+#for-patient-link img{
+    width: 50px;
+}
+
+#for-patient-contents-2{
+    width: 50%;
+    height: auto;
+}
+
+#news-content{
+    width: 90%;
+    height: 170px;
+    margin:0 20px 0 20px;
+    padding-left:20px ;
+    border: 2px solid rgba(252,246,242,1);
+    overflow:auto ;
+}
+
+#for-hospital{
+    position: relative;
+    z-index: 1;
+    top: -200px;
+    padding: 10%;
+    background-color: #fcf6f2 ;
+}
+
+#for-hospital-1{
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+#for-hospital-1 h2{
+    font-family:"Shippori Mincho",serif ;
+    font-size: 40px;
+}
+
+#for-hospital-1 a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #bd402a;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #bd402a ;
+}
+
+#for-hospital-2{
+    display: flex;
+}
+#for-hospital-2 .content{
+    text-align: center;
+    position: relative;
+    width: 33%;
+    height: auto;
+    margin: 1px;   
+}
+.content-img{
+    width: 100%;
+}
+
+#for-hospital-2 h3{
+    padding: 10px 20px;
+    display: inline;
+    background-color: #ffffff;
+    border-radius: 60% 60% 0 0;
+    position: relative;
+    top: -10px;
+    z-index: 10;
+    color:#89736F;
+}
+
+#for-hospital-2 .article{
+    padding: 20px 0;
+    background-color: #ffffff;
+    width: 100%;
+    position: relative;
+    top: -20px;
+    z-index: 0;
+}
+#for-hospital-2 h2{
+    font-size: 20px;
+    padding-bottom:15px ;
+    border-bottom: 1px dotted #89736F ;
+}
