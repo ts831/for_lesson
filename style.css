@@ -16,6 +16,10 @@ body{
     margin-right: auto;
 }
 
+.nav-iphone{
+    display: none;
+}
+
 #nav-1{
     display: flex;
     justify-content: right;
@@ -212,17 +216,19 @@ text-align: center;
     transform: translate(-50%, -50%);
     transform-origin: center;
     z-index: 100;
-    width: 80px;
-    height: 80px;
+    width: 0;
+    height: 0;
     border-radius: 50%;
     background-color:rgba(189, 64, 42,0.5);
     opacity: 0;
-
+    transition: 0.5s;
 }
 
 #for-patient-link a:hover::before{
     scale: 1;
     opacity: 1;
+    width: 80px;
+    height: 80px;
 }
 
 
@@ -230,6 +236,7 @@ text-align: center;
     margin: 0 auto;
     position: relative;
     top: 10px;
+    width: 50px;
 }
 
 #for-patient-link a:nth-of-type(2),#for-patient-link a:nth-of-type(5){
@@ -252,10 +259,6 @@ background-color: #E5DCDB;
 position: absolute;
 left: 0;
 bottom: -15px; 
-}
-
-#for-patient-link img{
-    width: 50px;
 }
 
 #for-patient-contents-2{
@@ -331,7 +334,8 @@ bottom: -15px;
     position: relative;
     width: 33%;
     height: auto;
-    margin: 1px;   
+    margin: 1px;  
+    overflow: hidden; 
 }
 .content-img{
     width: 100%;
@@ -367,13 +371,37 @@ bottom: -15px;
     padding-bottom:10px ;
 }
 
+#for-hospital-2 > div:nth-child(2) > div > a{
+    margin-top: 20px;
+}
+
+#for-hospital .content::before{
+    content: "";
+    position: absolute;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    background-color: rgba(189, 64, 42,0.3);
+    opacity: 0;
+}
+
+#for-hospital .content:hover::before{
+    opacity: 1;
+    scale: (1);
+    width:200%;
+    height:200%;
+    transition: 0.5s;
+}
+
+
 #search{
     display: flex;
     justify-content:space-around;
     margin-left:  auto;
     margin-right: auto;
     padding: 20px;
-    display: flex;
     width: 95%;
     height: auto;
     background-color: #ffffff;
@@ -386,6 +414,7 @@ bottom: -15px;
 }
 
 .search-content{
+    position: relative;
     display: block;
     text-align: center;
     width: 23%;
@@ -396,6 +425,29 @@ bottom: -15px;
     width: 30%;
     height: auto;
 }
+
+.search-content::before{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    z-index:100;
+    width: 0;
+    height: 0;
+    background-color:rgba(189, 64, 42,0.5);
+    opacity: 0;
+}
+
+.search-content:hover::before{
+    opacity: 1;
+    scale: (1);
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+}
+
 
 .search-content span{
     display: inline-block;
@@ -628,7 +680,6 @@ bottom: -15px;
     margin: auto 0;
     font-size: 12px;
 }
-
 footer{
     width: 100%;
     margin-top: 100px;
@@ -637,6 +688,7 @@ footer{
 .footer{
     display: flex;
     width: 100%;
+    height: 150px;
     padding: 0 10%;
 }
 
@@ -644,9 +696,39 @@ footer{
     width:45% ;
 }
 
-.footer-2{
-    width: 45%;
+.footer-1 p{
+    margin-bottom: 8px;
 }
+
+.footer-2{
+    margin:0 auto;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 35%;
+}
+
+.footer-2 a{
+    margin-bottom: 5px;
+    font-size:14px ;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.footer-2 a::before{
+    content: ">";
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #bd402a;
+    margin-right: 10px;
+}
+
+.footer-2 a:hover{
+    color: #bd402a;
+}
+
 
 #copyright{
     margin-top: 40px;
@@ -660,3 +742,346 @@ footer{
     background-color: #bd402a;
     color: #ffffff;
 }
+
+
+/* iphone用のレイアウト */
+
+@media screen and (max-width:428px) {
+    
+    #wrapper{
+        max-width: 428px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-pc{
+        display: none;
+    }
+
+    .nav-iphone{
+        display: flex;
+    }
+
+    .nav-iphone .logo{
+        display: flex;
+        margin: auto 0;
+    }
+
+    .nav-iphone .logo h1{
+        font-size: 20px;
+    }
+
+    .nav-iphone .nav{
+        margin-left: auto;
+    }
+
+    .nav-iphone .nav ul{
+        display: flex;
+    }
+
+    .nav-iphone .nav ul li{
+        display: block;
+        margin-right:5px ;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .list-img{
+        width: 30px;
+        height: auto;
+    }
+
+    .nav-iphone .nav ul li span{
+        position: relative;
+        display: block;
+        margin: 15px auto 13px auto;
+        width: 16px;
+        height: 2px;
+        background-color: #000000;
+    }
+
+    .nav-iphone .nav ul li span::before,.nav-iphone .nav ul li span::after{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 2px;
+        background-color: #000000;
+    }
+
+    .nav-iphone .nav ul li span::before{
+        position: absolute;
+        top: 5px;
+    }
+
+    .nav-iphone .nav ul li span::after{
+        position: absolute;
+        bottom: 5px;
+    }
+
+    main{
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        width: 100%;
+        height: 500px;
+    }
+
+    #in-main-img{
+        position:absolute;
+        top: 300px;
+        left: 20px;
+    }
+
+    .main-img{
+        position: absolute;
+        top: 140px;
+        left: 30px;
+        transform:scale(3);
+        transform-origin:center ;
+    }
+
+    #in-main-img h2{
+        display: block;
+        font-size: 35px;
+    }
+
+    #in-main-img a{
+        display: block;
+        margin-right:70px ;
+    }
+
+    #for-hospital{
+        position: relative;
+        top: 0;
+    }
+
+    #for-patient{
+        display: block;
+        width: 95%;
+        height: auto;
+        margin-left: 5%;
+        padding: 20px 30px;
+        top: -30px;
+    }
+
+    #for-patient h3{
+        font-size: 16px;
+        margin-bottom:5px ;
+    }
+
+    #for-patient-contents-1{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #for-patient-link a{
+        font-size: 0.8em;
+    }
+
+    #for-patient-link img{
+        width: 2rem;
+    }
+
+    #for-patient-link{
+        gap: 20px 0;
+    }
+
+    #for-patient-link a:nth-of-type(-n+3)::after{
+        bottom:-10px;
+    }
+
+    #for-patient-contents-2{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #news-content{
+        height: 100px;
+        margin-left: 0;
+        width: 100%;
+        border: none;
+    }
+
+    #for-hospital{
+        position: relative;
+        z-index: 1;
+        padding-top: 480px;
+        top: -410px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #for-hospital-1{
+        display: block;
+    }
+
+    #for-hospital-1 h2{
+        text-align: center;
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    #for-hospital-1 a{
+        display: block;
+        margin: 0 20px 30px 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #for-hospital-2{
+        display: block;
+        margin-top: 200px;
+    }
+
+    #for-hospital-2 .content{
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: auto;
+        text-align:left;
+    }
+
+    #for-hospital-2 h3{
+        padding: 0;
+        border-radius: 0;
+        display: block;
+        top: 10px;
+    }
+
+    .img-container{
+        position: absolute;
+        z-index: 100;
+        top: -10px;
+        width: 200px;
+        height: 130px;
+        overflow: hidden;
+    }
+
+    .content-img{
+        position: absolute;
+        z-index: 101;
+        top: -10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #image-1{
+        object-position: 50% 10%;
+    }
+
+    #search{
+        display: block;
+    }
+
+    .search-content{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        border: 1px solid #E5DCDB;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .search-content h3,.search-content p{
+        text-align: center;
+    }
+
+    .search-content h3{
+        margin-top: 20px;
+    }
+
+    .search-content p{
+        margin-bottom: 20px;
+    }
+
+
+    .search-content img{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .search-content span{
+        margin: 0;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .search-content:hover::before{
+        opacity: 0;
+        scale: 0;
+    }
+
+    #notice{
+        width: 100%;
+        margin: 0;
+        padding-bottom:80px ;
+        position: relative;
+    }
+
+    #notice>h3{
+        margin-bottom: 15px;
+        margin-left: 10px;
+    }
+
+
+    .notice-content{
+        display: block;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .notice-content1{
+        width: 100%;
+    }
+
+    .notice-button{
+        width: 90%;
+        margin: 0;
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+    }
+
+    .notice-content2{
+        width: 100%;
+    }
+
+    .notice-content2 a{
+        margin-bottom: 10px;
+    }
+
+    #notice-menu ul{
+        width: 100;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    #notice-menu ul li{
+        margin:2px;
+        padding: 3px;
+        border: 1px solid #E5DCDB;
+        border-radius: 3px;
+        word-wrap: break-word;
+    }
+
+    .pickup-contents{
+        display: block;
+        margin: 0 10px;
+    }
+
+    .pickup-content{
+        height: 120px;
+    }
+
+
+}   

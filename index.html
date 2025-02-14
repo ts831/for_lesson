@@ -11,40 +11,57 @@
     <body>
         <div id="wrapper">
             <header id="nav">
-                <div id="nav-1">
-                    <div id="saiyou-nav"> 
-                        <a href="">医療関係者の方へ</a>
-                        <a href="">採用希望の方へ</a>
+                <div class="nav-pc">
+                    <div id="nav-1">
+                        <div id="saiyou-nav"> 
+                            <a href="">医療関係者の方へ</a>
+                            <a href="">採用希望の方へ</a>
+                        </div>
+                        <div id="navigation-nav">
+                            <table>
+                                <td><a href="">交通アクセス</a></td>
+                                <td><a href="">院内マップ</a></td>
+                                <td><a href="">お問い合わせ</a></td>
+                            </table>
+                        </div>
+                        <div id="other-nav">
+                            <table>
+                                <tr>
+                                    <td><a href=""></a>表示</td>
+                                    <td><a href=""></a>検索</td>
+                                    <td><a href=""></a>メニュー</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-                    <div id="navigation-nav">
-                        <table>
-                            <td><a href="">交通アクセス</a></td>
-                            <td><a href="">院内マップ</a></td>
-                            <td><a href="">お問い合わせ</a></td>
-                        </table>
-                    </div>
-                    <div id="other-nav">
-                        <table>
-                            <tr>
-                                <td><a href=""></a>表示</td>
-                                <td><a href=""></a>検索</td>
-                                <td><a href=""></a>メニュー</td>
-                            </tr>
-                        </table>
+                    <div id="main_nav">
+                        <img src="" alt="ロゴ">
+                        <nav>
+                            <div class="nav-links">   
+                                <a href="">ホーム</a>
+                                <a href="">来院のご案内</a>
+                                <a href="">入院・面会のご案内</a>
+                                <a href="">当院について</a>
+                                <a href="">診療科・部門</a>
+                            </div>                    
+                        </nav>
                     </div>
                 </div>
-                <div id="main_nav">
-                    <img src="" alt="ロゴ">
-                    <nav>
-                        <div class="nav-links">   
-                            <a href="">ホーム</a>
-                            <a href="">来院のご案内</a>
-                            <a href="">入院・面会のご案内</a>
-                            <a href="">当院について</a>
-                            <a href="">診療科・部門</a>
-                        </div>                    
+                <div class="nav-iphone">
+                    <div class="logo">
+                        <img src="" alt="ロゴ">
+                        <h1>〇〇大学病院</h1>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><img class="list-img" src="images\button\130812.jpg" alt="">検索</li>
+                            <li><span></span>メニュー</li>
+                        </ul>
                     </nav>
                 </div>
+            </header>
+            <header>
+
             </header>
             <main>
                 <div id="main">
@@ -96,7 +113,9 @@
                 </div>
                 <div id="for-hospital-2">
                     <div class="content">
-                        <img class="content-img" src="images\medical-5051153_1920_edited.jpg" alt="">
+                        <div class="img-container">
+                            <img class="content-img" id="image-1" src="images\medical-5051153_1920_edited.jpg" alt="">
+                        </div>
                         <h3>01</h3>
                         <div class="article">
                             <h2>高度集約的治療</h2>
@@ -105,7 +124,9 @@
                         </div>
                     </div>
                     <div class="content">
-                        <img class="content-img" src="images\martha-dominguez-de-gouveia-nMyM7fxpokE-unsplash (1)_edited.jpg" alt="">
+                        <div class="img-container">
+                            <img class="content-img" id="image-2" src="images\martha-dominguez-de-gouveia-nMyM7fxpokE-unsplash (1)_edited.jpg" alt="">
+                        </div>
                         <h3>02</h3>
                         <div class="article">
                             <h2>救命救急医療</h2>
@@ -114,7 +135,9 @@
                         </div>
                     </div>
                     <div class="content">
-                        <img class="content-img" src="images\mri-2813911_1920_edited.jpg" alt="">
+                        <div class="img-container">
+                            <img class="content-img" id="image-3" src="images\mri-2813911_1920_edited.jpg" alt="">
+                        </div>
                         <h3>03</h3>
                         <div class="article">
                             <h2>予防医療</h2>
@@ -291,14 +314,13 @@
                         </div>
                     </div>
                     <div class="footer-2">
-                        <p>お知らせ</p>
-                        <p>医療情報検索</p>
-                        <p>ウェブアクセシビリティ</p>
-                        <p>関連リンク</p>
-                        <p>ニュースレター</p>
-                        <p>このサイトについて</p>
-                        <p>個人情報保護方針</p>
-                        <p>関連リンク</p>
+                        <a href="">お知らせ</a>
+                        <a href="">医療情報検索</a>
+                        <a href="">ウェブアクセシビリティ</a>
+                        <a href="">関連リンク</a>
+                        <a href="">ニュースレター</a>
+                        <a href="">このサイトについて</a>
+                        <a href="">個人情報保護方針</a>
                     </div>
                 </div>
                 <div id="copyright">
