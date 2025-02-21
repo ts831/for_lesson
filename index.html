@@ -7,13 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="recet.css">
         <link rel="stylesheet" href="style.css">
+        <!-- slick -->
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     </head>
     <body>
         <div id="wrapper">
             <header id="nav">
                 <div class="nav-pc">
                     <div id="nav-1">
-                        <div id="saiyou-nav"> 
+                        <div class="saiyou-nav"> 
                             <a href="">医療関係者の方へ</a>
                             <a href="">採用希望の方へ</a>
                         </div>
@@ -55,17 +58,58 @@
                     <nav class="nav">
                         <ul>
                             <li><img class="list-img" src="images\button\130812.jpg" alt="">検索</li>
-                            <li><span></span>メニュー</li>
+                            <li id="menu_iphone"><span></span>メニュー</li>
                         </ul>
                     </nav>
                 </div>
-            </header>
-            <header>
-
+                <!-- iphone ipad ハンバーガーメニュー -->
+                 <div id="ipad_hamburger_menu" class="hamburger-menu-iphone">
+                    <p id="close_btn" class="close-btn">×</p>
+                    <div id="for-patient-contents-1">
+                        <h3>来院される方へ</h3>
+                        <div id="for-patient-link">
+                            <a href=""><img src="images\button\初心者マークの無料アイコン素材 1.jpeg" alt="ロゴ"><br>初診のご案内</a>
+                            <a href=""><img src="images\button\icon_003490_256.jpg" alt="ロゴ"><br>再診のご案内</a>
+                            <a href=""><img src="images\button\icon_127410_256.jpg" alt="ロゴ"><br>入院のご案内</a>
+                            <a href=""><img src="images\button\買い物カゴのアイコン9.jpeg" alt="ロゴ"><br>面会のご案内</a>
+                            <a href=""><img src="images\button\icon_108480_256.jpg" alt="ロゴ"><br>救急外来</a>
+                            <a href=""><img src="images\button\MRI・CTスキャンの無料アイコン素材 6.jpeg" alt="ロゴ"><br>健診・人間ドック</a>
+                        </div>    
+                    </div>
+                    <div class="link1">
+                        <a href="">診療スケジュールを見たい</a>
+                        <a href="">病院のへの行き方を知りたい</a>
+                        <a href="">院内マップと施設を見たい</a>
+                        <a href="">連絡先を知りたい</a>
+                    </div>
+                    <div class="saiyou-nav"> 
+                        <a href="">医療関係者の方へ</a>
+                        <a href="">採用希望の方へ</a>
+                    </div>
+                    <div class="nav-links">   
+                        <a href="">来院のご案内</a>
+                        <a href="">入院・面会のご案内</a>
+                        <a href="">当院について</a>
+                        <a href="">診療科・部門</a>
+                    </div> 
+                    <div class="footer-2">
+                        <a href="">お知らせ</a>
+                        <a href="">医療情報検索</a>
+                        <a href="">ウェブアクセシビリティ</a>
+                        <a href="">関連リンク</a>
+                        <a href="">ニュースレター</a>
+                        <a href="">このサイトについて</a>
+                        <a href="">個人情報保護方針</a>
+                    </div> 
+                 </div>                
             </header>
             <main>
                 <div id="main">
-                    <img class="main-img"  src="images\30929990_m_edited.jpg" alt="医者と患者">
+                    <div class="main-img">
+                        <div><img src="images\30929990_m_edited.jpg" alt="医者と患者"></div>
+                        <div><img src="images\31517961_m_edited.jpg" alt="医療従事車たち"></div>
+                        <div><img src="images\aig-ai20231212010-xl_TP_V_edited.jpg" alt="病室"></div>
+                    </div>
                     <div id="in-main-img">
                         <h2>病院は<br>病者のためにある</h2>
                         <div id="for-hospital-btn">
@@ -204,8 +248,21 @@
                     </div>
                 </div>
             </section>
-            <section id="carousel">
-                <!-- カルーセルを淹れます -->
+            <section class="carousel-tab">
+                <div class="carousel">
+                    <div><img src="images/30859421_s.jpg" alt=""></div>
+                    <div><img src="images/martha-dominguez-de-gouveia-nMyM7fxpokE-unsplash (1).jpg" alt=""></div>
+                    <div><img src="images/pexels-vidalbalielojrfotografia-3376799.jpg" alt=""></div>
+                    <div><img src="images/30929990_m.jpg" alt=""></div>
+                    <div><img src="images/tomaturiHFKE2155_TP_V.jpg" alt=""></div>
+                </div>
+                <div class="carousel2" dir="rtl" >
+                    <div><img src="images/30859421_s.jpg" alt=""></div>
+                    <div><img src="images/martha-dominguez-de-gouveia-nMyM7fxpokE-unsplash (1).jpg" alt=""></div>
+                    <div><img src="images/pexels-vidalbalielojrfotografia-3376799.jpg" alt=""></div>
+                    <div><img src="images/30929990_m.jpg" alt=""></div>
+                    <div><img src="images/tomaturiHFKE2155_TP_V.jpg" alt=""></div>
+                </div>
             </section>
             <section id="pickup">
                 <div class="pickup-contents">
@@ -328,5 +385,10 @@
                 </div>
             </footer>
         </div>
+        <!-- slick読み込み -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

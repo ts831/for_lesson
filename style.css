@@ -1,6 +1,3 @@
-html{
-    
-}
 
 
 body{
@@ -25,12 +22,12 @@ body{
     justify-content: right;
 }
 
-#saiyou-nav{
+.saiyou-nav{
     display: flex;
     font-weight: bold;
     margin: 5px;
 }
-#saiyou-nav>a{
+.saiyou-nav>a{
     color: #ffffff;
     background-color: #5d4828;
     font-size: 14px;
@@ -40,7 +37,7 @@ body{
     margin: 5px;
 
 }
-#saiyou-nav>a::before{
+.saiyou-nav>a::before{
     content: ">";
     font-size: 10px;
     margin-right: 6px;
@@ -71,6 +68,62 @@ body{
     border-right:1px solid #5d4828 ;
     border-left:1px solid #5d4828 ; 
 }
+
+.hamburger-menu-iphone{
+    display: none;
+    width: 100%;
+    background-color: #fcf6f2;
+    padding-top: 80px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
+.close-btn{
+    font-size: 70px;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.hamburger-menu-iphone .link1{
+    margin: 0 10px;
+}
+
+.hamburger-menu-iphone .link1 a{
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    border:1px solid #5d4828;
+    border-radius: 5px;
+    margin: 4px 0;
+    padding-left: 50px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.hamburger-menu-iphone .saiyou-nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 10%;    
+}
+
+.hamburger-menu-iphone .nav-links{
+    flex-direction: column;
+    align-items: normal;
+    background-color: #fff;
+}
+
+.hamburger-menu-iphone .footer-2{
+    background-color: #fff;
+    margin-top: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
 
 #main_nav{
     display: flex;
@@ -111,7 +164,12 @@ body{
 }
 .main-img{
     width: 100%;
-   height: auto;
+   height: 100%;
+}
+
+.main-img img{
+    width: 100%;
+    height: auto;
 }
 
 #in-main-img{
@@ -287,7 +345,7 @@ bottom: -15px;
     width: 100%;
     height: auto;
     position: relative;
-    top: -345px;
+    top: -365px;
     z-index: 1;
     padding: 30% 10% 10% 10%;
     background-color: #fcf6f2 ;
@@ -346,8 +404,9 @@ bottom: -15px;
     display: inline;
     background-color: #ffffff;
     border-radius: 60% 60% 0 0;
-    position: relative;
-    top: -10px;
+    position: absolute;
+    left: 40%;
+    top:60%;
     z-index: 10;
     color:#89736F;
 }
@@ -356,8 +415,6 @@ bottom: -15px;
     padding: 30px 0;
     background-color: #ffffff;
     width: 100%;
-    position: relative;
-    top: -25px;
     z-index: 0;
 }
 #for-hospital-2 h2{
@@ -606,10 +663,6 @@ bottom: -15px;
 }
 
 
-.iframe{
-    width: 100%;
-    height: 300px;
-}
 .guide-content2{
     position: relative;
     top: -70px;
@@ -743,6 +796,34 @@ footer{
     color: #ffffff;
 }
 
+.carousel-tab{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.carousel{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.carousel img{
+    height: 15vw;
+    max-width: 200px;
+    min-height: 140px;
+}
+
+.carousel2{
+    margin-bottom: 20px;
+}
+
+.carousel2 img{
+    height: 15vw;
+    max-width: 200px;
+    min-height: 140px;
+}
 
 /* iphone用のレイアウト */
 
@@ -851,7 +932,6 @@ footer{
     }
 
     #for-hospital{
-        position: relative;
         top: 0;
     }
 
@@ -912,6 +992,11 @@ footer{
         padding-right: 0;
     }
 
+    #for-hospital .content:hover::before{
+        opacity: 0;
+        scale: 0;
+    }
+
     #for-hospital-1{
         display: block;
     }
@@ -932,37 +1017,44 @@ footer{
 
     #for-hospital-2{
         display: block;
-        margin-top: 200px;
+        margin-top: 10px;
     }
 
     #for-hospital-2 .content{
-        position: relative;
+        position: static;
         z-index: 10;
         width: 100%;
         height: auto;
         text-align:left;
+        margin-top:-50px ;
     }
 
     #for-hospital-2 h3{
-        padding: 0;
+        position: static;
+        padding: 20px 0 0 5px;
         border-radius: 0;
         display: block;
-        top: 10px;
+        top: 0;
+        z-index: 1;
     }
 
+    #for-hospital-2 .article{
+        padding-bottom: 30px;
+        padding-top: 0;
+    }
+    
+
     .img-container{
-        position: absolute;
-        z-index: 100;
-        top: -10px;
+        position: relative;
+        top:60px;
+        left: 160px;
+        z-index:100 ;
         width: 200px;
         height: 130px;
         overflow: hidden;
     }
 
     .content-img{
-        position: absolute;
-        z-index: 101;
-        top: -10px;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1083,5 +1175,403 @@ footer{
         height: 120px;
     }
 
+    #guide{
+        flex-direction: column;
+        padding: 0 20px;
+    }
 
+    .guide-content1{
+        position: static;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .guide-article p{
+        font-size: 14px;
+    }
+
+    .guide-content2{
+        position: static;
+        width: 100%;
+    }
+
+    .guide-content2 .telephone-number{
+        position: relative;
+        z-index: 1;
+        display: block;
+        text-align: center;
+        padding: 20px 0 20px 15px;
+        margin: 10px 0;
+    }
+
+    .telephone-number-img{
+        position: absolute;
+        z-index: 0;
+        left: 40px;
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .guide-content2 .telephone-number h2{
+        font-size: 20px;
+        margin-bottom:5px ;
+    }
+
+    .guide-content2 .telephone-number p{
+        padding-right:55px;
+
+    }
+
+    .telephone-number p::before{
+        padding-top:3px ;
+    }
+
+    .guide-buttons{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .guide-button{
+        text-align: center;
+        margin-bottom: 6px;
+        padding: 10px;
+    }
+
+        .guide-button p::before{
+            font-size: 15px;
+            margin-right: 6px;
+            position: relative;
+            top: -2px;
+        }
+
+        .footer{
+            display: block;
+            height: auto;
+            padding: 0 20px;
+        }
+
+        .footer-1{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .footer-2{
+            width: 100%;
+            margin-top: 30px;
+            flex-direction: row;
+        }
+
+        .footer-2 a::before{
+            margin-right: 3px;
+            margin-left: 10px;
+        }
 }   
+
+/* タブレットレイアウト */
+@media (min-width:429px) and (max-width:1093px) {
+   
+    #wrapper{
+        max-width: 1024px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-pc{
+        display: none;
+    }
+
+    .nav-iphone{
+        display: flex;
+    }
+
+    .nav-iphone .logo{
+        display: flex;
+        margin: auto 0;
+    }
+
+    .nav-iphone .logo h1{
+        font-size: 20px;
+    }
+
+    .nav-iphone .nav{
+        margin-left: auto;
+    }
+
+    .nav-iphone .nav ul{
+        display: flex;
+    }
+
+    .nav-iphone .nav ul li{
+        display: block;
+        margin-right:5px ;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .list-img{
+        width: 30px;
+        height: auto;
+    }
+
+    .nav-iphone .nav ul li span{
+        position: relative;
+        display: block;
+        margin: 15px auto 13px auto;
+        width: 16px;
+        height: 2px;
+        background-color: #000000;
+    }
+
+    .nav-iphone .nav ul li span::before,.nav-iphone .nav ul li span::after{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 2px;
+        background-color: #000000;
+    }
+
+    .nav-iphone .nav ul li span::before{
+        position: absolute;
+        top: 5px;
+    }
+
+    .nav-iphone .nav ul li span::after{
+        position: absolute;
+        bottom: 5px;
+    }
+
+    #for-patient{
+        display: block;
+        width: 95%;
+        top: -30px;
+        padding: 20px 30px;    
+    }
+
+    #for-patient-contents-1{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    #for-patient-contents-2{
+        width: 100%;
+    }
+
+    #for-patient h3{
+        margin-left: 10px;
+        margin-bottom: 8px;
+    }
+
+    #news-content{
+        margin-top: 0;
+        margin-left: 10px;
+        padding-left: 0;
+        height: 100px;
+    }
+
+    #for-hospital{
+        top: -445px;
+        padding: 60% 20px 10% 20px;
+    }
+
+    #for-hospital-1{
+        display: block;
+    }
+
+    #for-hospital-1 h2{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    #for-hospital-1 a{
+        padding: 15px 30px;
+    }
+
+    #for-hospital-2{
+        margin-bottom: 50px;
+    }
+
+    #for-hospital-2 .content{
+        margin-top: 30px;
+    }
+     
+    #for-hospital-2 .article{
+        height: 200px;
+    }
+
+    #for-hospital-2 h3{
+        padding: 10px 20px;
+        left: 40%;
+        top:52%;
+    }
+    
+
+    #search{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:1fr 3fr;
+    }
+
+    .search-content{
+        position: relative;
+        border: 1px solid #E5DCDB;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .search-explain{
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    .search-content img{
+        margin-top: 30px;
+    }
+
+    .search-content span{
+        margin-top: 10px;
+    }
+
+    #notice{
+        position: relative;
+        margin-top: -350px;
+        padding-bottom: 60px;
+    }
+
+
+    .notice-content{
+        display: block;
+        margin: 0;
+    }
+    
+    .notice-content1{
+        width: 100%;
+    }
+
+    .notice-content2{
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #notice-menu ul{
+        width: 100;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right:20px ;
+    }
+
+    #notice-menu ul li{
+        margin:2px;
+        padding: 3px;
+        border: 1px solid #E5DCDB;
+        border-radius: 3px;
+        word-wrap: break-word;
+    }
+
+    .notice-button{
+        margin: 0;
+        position: absolute;
+        bottom: 10px;
+        left: 40%;
+    }
+
+    .notice-button p{
+        padding: 15px 30px;
+    }
+    
+    #pickup{
+        margin-top: 10px;
+    }
+    
+    .pickup-contents{
+        margin: 0 20px;
+    }
+
+    #guide{
+        margin-top: 100px;
+        padding: 020px;
+    }
+
+    .guide-img1{
+        width: 100%;
+        height: 286px;
+    }
+    
+
+    .guide-iframe{
+        height: 286px;
+    }
+
+    .guide-content2 .telephone-number{
+        position: relative;
+        z-index: 1;
+        display: block;
+        text-align: center;
+        padding: 20px 0 20px 15px;
+        margin: 10px 0;
+    }
+
+    .telephone-number-img{
+        position: absolute;
+        z-index: 0;
+        left: 40px;
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .guide-content2 .telephone-number h2{
+        font-size: 20px;
+        margin-bottom:5px ;
+    }
+
+    .guide-content2 .telephone-number p{
+        padding-right:55px;
+
+    }
+
+    .telephone-number p::before{
+        padding-top:3px ;
+    }
+
+    .guide-buttons{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .guide-button{
+        margin-right:auto ;
+        padding-left:30px;
+        padding-right: 30px;
+        margin-bottom: 10px;
+    }
+
+    footer{
+        margin-top: 10px;
+    }
+
+    .footer{
+        display: block;
+        height: auto;
+        padding: 0 20px;
+
+    }
+
+    .footer-1{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-2{
+        width: 100%;
+        margin-top: 30px;
+        flex-direction: row;
+    }
+
+}
