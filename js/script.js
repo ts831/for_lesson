@@ -13,6 +13,26 @@ $(document).ready(function(){
       pauseOnHover:false,
       infinete:true,
       centerMode:true,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
     });
 
     $('.carousel2').slick({
@@ -27,7 +47,27 @@ $(document).ready(function(){
       infinete:true,
       pauseOnHover:false,
       rtl:true,
-      centerMode:true
+      centerMode:true,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
     });
 
 
@@ -48,6 +88,17 @@ $(document).ready(function(){
       ipad_menu.style.display = 'none';
     });
 
+    const hover_2 = document.getElementById('nav-link2')
+
+    const pc_menu2 = document.getElementById('pc_hamburger_menu')
+
+    hover_2.addEventListener('mouseover',()=>{
+      pc_menu2.style.opacity=1;
+    });
+
+    pc_menu2.addEventListener('mouseleave',()=>{
+      pc_menu2.style.opacity=0;
+    });
 
 
   });
